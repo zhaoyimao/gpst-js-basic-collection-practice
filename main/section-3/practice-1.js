@@ -1,5 +1,13 @@
 'use strict';
 
+
 module.exports = function createUpdatedCollection(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
+  return collectionA.filter(value_a=>{
+    if(objectB.value.includes(value_a.key)){
+      value_a.count=value_a.count-1;
+      return value_a.count;
+    }else{
+      return value_a.count;
+    }
+  });
 }
